@@ -8,7 +8,10 @@ class HHSF {
   HHSF() {};
   virtual ~HHSF() {};
 
-  float trigger_sf(const bool& pass_1, const bool& pass_2, const float& sf_1, const float& sf_2);
+  float trigger_sf(const bool& match_1, 
+		   const bool& match_2, 
+		   const float& sf_1, 
+		   const float& sf_2);
 
   float tauid_sf(const long& event_number, 
 		 const bool& tight_1, 

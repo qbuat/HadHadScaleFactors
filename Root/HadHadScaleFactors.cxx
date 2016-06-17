@@ -2,10 +2,10 @@
 #include "TError.h"
 
 
-float HHSF::trigger_sf(const bool& pass_1, const bool& pass_2, const float& sf_1, const float& sf_2)
+float HHSF::trigger_sf(const bool& match_1, const bool& match_2, const float& sf_1, const float& sf_2)
 {
 
-  return pass_1 * sf_1 * pass_2 * sf_2;
+  return match_1 * sf_1 * match_2 * sf_2;
 
 }
 

@@ -11,5 +11,5 @@
 
 
 #ifdef __CINT__
-#pragma link C++ namespace HHSF;
+#pragma link C++ class HHSF;
 #endif

@@ -1,12 +1,14 @@
 #ifndef HadHadScaleFactors_HadHadScaleFactors_H
 #define HadHadScaleFactors_HadHadScaleFactors_H
 
+
 class HHSF {
 
  public:
   
   HHSF() {};
   virtual ~HHSF() {};
+
 
   float trigger_sf(const bool& match_1, 
 		   const bool& match_2, 

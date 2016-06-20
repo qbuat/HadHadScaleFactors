@@ -11,5 +11,8 @@
 
 
 #ifdef __CINT__
-#pragma link C++ class HHSF;
+#pragma link C++ namespace HHSF+;
+#pragma link C++ struct HHSF::DummyStruct+;
+#pragma link C++ function trigger_sf+;
+#pragma link C++ function HHSF::tauid_sf+;
 #endif

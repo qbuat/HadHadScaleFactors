@@ -2,28 +2,24 @@
 #define HadHadScaleFactors_HadHadScaleFactors_H
 
 
-class HHSF {
+namespace HHSF {
 
- public:
-  
-  HHSF() {};
-  virtual ~HHSF() {};
+  struct DummyStruct {};
 
 
-  float trigger_sf(const bool& match_1, 
-		   const bool& match_2, 
-		   const float& sf_1, 
-		   const float& sf_2);
+  const float trigger_sf(bool match_1, 
+			 bool match_2, 
+			 float sf_1, 
+			 float sf_2);
 
-  float tauid_sf(const long& event_number, 
-		 const bool& tight_1, 
-		 const bool& tight_2, 
-		 const float& sf_tight_1, 
-		 const float& sf_tight_2, 
-		 const float& sf_med_1, 
-		 const float& sf_med_2);
-
-};
+  const float tauid_sf(long event_number, 
+		       bool tight_1, 
+		       bool tight_2, 
+		       float sf_tight_1, 
+		       float sf_tight_2, 
+		       float sf_med_1, 
+		       float sf_med_2);
+}
 
 
 #endif

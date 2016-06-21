@@ -17,13 +17,6 @@ tree = rfile.Get("NOMINAL")
 print tree.GetEntries()
 
 
-
-hist = ROOT.TH1F("hist", "hist", 10, 0, 100)
-
-def rescale(var):
-    return var / 1000.
-
-
 weight_trig_str = 'HHSF::trigger_sf({0}, {1}, {2}, {3})'.format(
     'ditau_tau0_HLT_tau35_medium1_tracktwo',
     'ditau_tau1_HLT_tau25_medium1_tracktwo',
@@ -41,5 +34,7 @@ weight_id_str = 'HHSF::tauid_sf({0}, {1}, {2}, {3}, {4}, {5}, {6})'.format(
 
 tauid_sel = 'n_taus_medium == 2 && n_taus_tight > 0 && ditau_tau0_jet_bdt_medium == 1 && ditau_tau1_jet_bdt_medium == 1'
 
+
+hist = ROOT.TH1F("hist", "hist", 10, 0, 100)
 tree.Draw("ditau_vis_mass>>hist", "({0}) * {1} * {2}".format(tauid_sel, weight_trig_str, weight_id_str))
 print hist.Integral()
